@@ -1,0 +1,73 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "med-button": {
+      "projectType": "library",
+      "root": "projects/med-button",
+      "sourceRoot": "projects/med-button/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/med-button/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/med-button/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/med-button/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/med-button/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    },
+    "med-button-group": {
+      "projectType": "library",
+      "root": "projects/med-button-group",
+      "sourceRoot": "projects/med-button-group/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/med-button-group/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/med-button-group/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/med-button-group/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/med-button-group/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -28,4 +28,130 @@ body {
   }
 }
 
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 1000px;
+    align-items: center;
+
+    section {
+      .section-description {
+        margin: 56px 0;
+
+        h1 {
+          font-family: 'Inter';
+          font-size: 32px;
+          font-weight: 500;
+          line-height: 40px;
+        }
+
+        p {
+          font-family: 'Manrope';
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+
+        th {
+          font-family: 'Manrope';
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 24px;
+          text-align: left;
+          padding: 25px;
+          border: 1px solid #E4E4E4;
+        }
+
+        td {
+          text-align: left;
+          padding: 10px 25px;
+          border: 1px solid #E4E4E4;
+        }
+      }
+    }
+  }
+}
+
+button {
+  display: flex;
+  align-items: center;
+  font-family: 'Manrope';
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  border: none;
+  border-radius: 100px;
+  gap: 8px;
+  cursor: pointer;
+  &:disabled {
+    background: #E4E4E4;
+    color: #A2A2A2;
+    cursor: not-allowed;
+  }
+  &:focus {
+    outline: 1px dashed #000;
+    outline-offset: 1px;
+  }
+
+  &.large {
+    padding: 12px 24px;
+  }
+
+  &.medium {
+    padding: 8px 16px;
+  }
+
+  &.primary {
+    background: #3F4FA0;
+    color: #FFFFFF;
+    &:hover {
+      background: #394892;
+    }
+    &:active {
+      background: #2D3872;
+    }
+  }
+
+  &.secondary {
+    background-color: #ECEDF6;
+    color: #3F4FA0;
+    &:hover {
+      background: #D9DCEC;
+    }
+    &:active {
+      background: #C5CAE3;
+    }
+  }
+
+  &.destructive {
+    background: #FFEAE9;
+    color: #FA6E6B;
+    &:hover {
+      background: #FFEAE9;
+      border: 1px solid #000000;
+      &.large {
+        padding: 11px 23px;
+      }
+      &.medium {
+        padding: 7px 15px;
+      }
+    }
+    &:active {
+      background: #FFE2E0;
+    }
+  }
+}
+
+
 

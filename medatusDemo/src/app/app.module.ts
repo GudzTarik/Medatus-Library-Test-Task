@@ -1,18 +1,34 @@
+// modules
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppComponent } from './app.component';
+import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
+
+// components
+import { AppComponent } from './app.component';
+import { BackgroundComponent } from './background/background.component';
+import { ButtonGroupsComponent } from './button-groups/button-groups.component';
+import { ButtonsComponent } from './buttons/buttons.component';
+import { ExamplesComponent } from './examples/examples.component';
+import { HeaderComponent } from './header/header.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ExamplesComponent,
+    ButtonsComponent,
+    ButtonGroupsComponent,
+    HeaderComponent,
+    BackgroundComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

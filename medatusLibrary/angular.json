@@ -7,7 +7,7 @@
       "projectType": "library",
       "root": "projects/med-button",
       "sourceRoot": "projects/med-button/src",
-      "prefix": "lib",
+      "prefix": "med",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
@@ -40,7 +40,7 @@
       "projectType": "library",
       "root": "projects/med-button-group",
       "sourceRoot": "projects/med-button-group/src",
-      "prefix": "lib",
+      "prefix": "med",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
@@ -69,5 +69,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

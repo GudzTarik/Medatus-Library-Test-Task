@@ -2,6 +2,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { MedButtonModule } from 'med-button';
 import { AppRoutingModule } from './app-routing.module';
 
 // components
@@ -25,7 +26,8 @@ import { HeaderComponent } from './header/header.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    MedButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

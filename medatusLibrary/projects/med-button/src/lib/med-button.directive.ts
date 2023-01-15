@@ -25,7 +25,6 @@ export class MedButtonDirective {
     const css = this.getButtonStyle();
     const style = document.createElement('style');
 
-
     if (style.textContent) {
       style.textContent = css;
     } else {

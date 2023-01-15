@@ -62,6 +62,7 @@ body {
       table {
         width: 100%;
         border-collapse: collapse;
+
         th {
           font-family: 'Manrope';
           font-weight: 600;
@@ -98,6 +99,7 @@ body {
     background: #E4E4E4;
     color: #A2A2A2;
     cursor: not-allowed;
+
     svg {
       fill: #A2A2A2;
     }
@@ -120,6 +122,7 @@ body {
   &.button-primary {
     background: #3F4FA0;
     color: #FFFFFF;
+
     svg {
       fill: #FFFFFF;
     }
@@ -136,6 +139,7 @@ body {
   &.button-secondary {
     background-color: #ECEDF6;
     color: #3F4FA0;
+
     svg {
       fill: #3F4FA0;
     }
@@ -152,6 +156,7 @@ body {
   &.button-destructive {
     background: #FFEAE9;
     color: #FA6E6B;
+
     svg {
       fill: #FA6E6B;
     }

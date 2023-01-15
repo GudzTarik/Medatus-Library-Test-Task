@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import {
+  RouterModule,
+  Routes
+} from '@angular/router';
 import { ButtonGroupsComponent } from './button-groups/button-groups.component';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { ExamplesComponent } from './examples/examples.component';

@@ -1,7 +1,10 @@
-import {ModuleWithProviders, NgModule} from '@angular/core';
-import {MedButtonDirective} from './med-button.directive';
-import {MedButtonConfig} from "./med-button.config";
-import {MED_BUTTON_CONFIG} from "./med-button.config.token";
+import {
+  ModuleWithProviders,
+  NgModule
+} from '@angular/core';
+import { MedButtonConfig } from './med-button.config';
+import { MED_BUTTON_CONFIG } from './med-button.config.token';
+import { MedButtonDirective } from './med-button.directive';
 
 
 @NgModule({

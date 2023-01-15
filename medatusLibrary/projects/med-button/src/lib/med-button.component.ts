@@ -7,8 +7,7 @@ import { Component } from '@angular/core';
       med-button works!
     </p>
   `,
-  styles: [
-  ]
+  styles: []
 })
 export class MedButtonComponent {
 

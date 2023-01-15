@@ -1,4 +1,7 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {
+  ComponentFixture,
+  TestBed
+} from '@angular/core/testing';
 
 import { MedButtonComponent } from './med-button.component';
 
@@ -8,9 +11,9 @@ describe('MedButtonComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MedButtonComponent ]
+      declarations: [MedButtonComponent]
     })
-    .compileComponents();
+                 .compileComponents();
 
     fixture = TestBed.createComponent(MedButtonComponent);
     component = fixture.componentInstance;
@@ -18,6 +21,7 @@ describe('MedButtonComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(component)
+    .toBeTruthy();
   });
 });

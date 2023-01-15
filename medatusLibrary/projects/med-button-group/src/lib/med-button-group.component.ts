@@ -7,8 +7,7 @@ import { Component } from '@angular/core';
       med-button-group works!
     </p>
   `,
-  styles: [
-  ]
+  styles: []
 })
 export class MedButtonGroupComponent {
 

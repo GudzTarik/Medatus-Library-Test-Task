@@ -2,7 +2,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-import { MedButtonModule } from 'med-button';
+import {
+  MedButtonConfig,
+  MedButtonModule
+} from 'med-button';
+import {
+  MedButtonGroupConfig,
+  MedButtonGroupModule
+} from 'med-button-group';
 import { AppRoutingModule } from './app-routing.module';
 
 // components
@@ -27,7 +34,8 @@ import { HeaderComponent } from './header/header.component';
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    MedButtonModule
+    MedButtonModule.forRoot(new MedButtonConfig()),
+    MedButtonGroupModule.forRoot(new MedButtonGroupConfig())
   ],
   providers: [],
   bootstrap: [AppComponent]

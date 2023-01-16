@@ -23,19 +23,9 @@ export class MedButtonConfig {
     activeStateBackgroundColor: '#2D3872',
     textColor: '#A2A2A2'
   };
-  mediumButtonPadding: string = '';
-  largeButtonPadding: string = '';
+  mediumButtonPadding: string = 'padding: 8px 16px;';
+  largeButtonPadding: string = 'padding: 12px 24px;';
 }
-
-//
-// export interface MedButtonConfig {
-//   primaryColor: MedButtonColor;
-//   secondaryColor: MedButtonColor;
-//   destructiveColor: MedButtonColor;
-//   disabledColor: MedButtonColor;
-//   mediumButtonPadding: string;
-//   largeButtonPadding: string;
-// }
 
 export interface MedButtonColor {
   backgroundColor: string;

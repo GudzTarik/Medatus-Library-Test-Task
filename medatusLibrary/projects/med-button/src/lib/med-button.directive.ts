@@ -2,8 +2,10 @@ import {
   Directive,
   ElementRef,
   Inject,
-  Input
+  Input,
+  OnInit
 } from '@angular/core';
+
 import {
   MedButtonColorType,
   MedButtonConfig
@@ -17,12 +19,15 @@ import { MED_BUTTON_CONFIG } from './med-button.config.token';
     class: 'med-button'
   }
 })
-export class MedButtonDirective {
+export class MedButtonDirective implements OnInit {
   @Input() size: 'medium' | 'large' = 'medium';
   @Input() color: 'primary' | 'secondary' | 'destructive' = 'primary';
   @Input() disabled: boolean = false;
 
   constructor(private elementRef: ElementRef, @Inject(MED_BUTTON_CONFIG) private medButtonConfig: MedButtonConfig) {
+  }
+
+  ngOnInit(): void {
     this.elementRef.nativeElement.classList.add(this.color);
     this.elementRef.nativeElement.classList.add(this.size);
 
@@ -56,14 +61,18 @@ export class MedButtonDirective {
   }
 
   private createButtonClass(medButtonColorType: MedButtonColorType): string {
-    let buttonStyles = `.${ this.color } { background-color: ${ this.medButtonConfig[medButtonColorType].backgroundColor }; color: ${ this.medButtonConfig[medButtonColorType].textColor };}`;
+    const medButton = '.med-button {display: flex; align-items: center; font-family: "Manrope", sans-serif; font-weight: 700; font-size: 16px; line-height: 24px; border: none; border-radius: 100px; gap: 8px; cursor: pointer;}'
     const activeStateStyles = `.${ this.color }:active {background-color: ${ this.medButtonConfig[medButtonColorType].activeStateBackgroundColor };}`;
     const hoverStateStyles = `.${ this.color }:hover {background-color: ${ this.medButtonConfig[medButtonColorType].activeStateBackgroundColor };}`;
+    const buttonPudding = this.size === 'medium' ? this.medButtonConfig.mediumButtonPadding : this.medButtonConfig.largeButtonPadding;
+
+    let buttonStyles = `.${ this.color } { background-color: ${ this.medButtonConfig[medButtonColorType].backgroundColor }; color: ${ this.medButtonConfig[medButtonColorType].textColor }; ${ buttonPudding }}`;
 
     if (this.medButtonConfig[medButtonColorType].border) {
       buttonStyles += `border: ${ this.medButtonConfig[medButtonColorType].border }`;
     }
 
-    return buttonStyles + activeStateStyles + hoverStateStyles;
+
+    return `${medButton} ${buttonStyles} ${activeStateStyles} ${hoverStateStyles}`;
   }
 }
